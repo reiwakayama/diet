@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Four Boxes Layout</title>
+    <title>diet</title>
     <link rel="stylesheet" href="diet.css">
 </head>
 <body>
@@ -29,9 +29,24 @@
     </div>
 
     <div id="bottom" class="box">
-        <h2>Bottom Container (Full Width)</h2>
+        <h2>ダイエットレシピ</h2>
+        <p>Additional content goes here.</p>
+        <h2>ダイエットルール</h2>
         <p>Additional content goes here.</p>
     </div>
 
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = 'minus5kgs'; 
+
+            if (password === correctPassword) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('Incorrect password');
+            }
+        }
+    </script>
 </body>
 </html>
