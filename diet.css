@@ -30,7 +30,7 @@ img {
     border-color: #071419;
     border-radius: 12px;
     padding: 20px;
-    margin: 10px auto;
+    margin: 5px;
     max-width: 780px;
 }
 
@@ -44,6 +44,7 @@ img {
 #topLeft {
     width: 33%;
     padding: 17px;
+    margin-right: 5px;
 }
 
 #topRight {
@@ -54,12 +55,12 @@ img {
 
 #middleContainer {
     width: 780px;
-    margin: 10px auto;
+    margin: 5px;
     padding: 10px 0;
 }
 
 #bottom {
     width: 780px;
-    margin: 10px auto;
+    margin: 5px;
     padding: 25px 15px;
 }
