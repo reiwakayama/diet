@@ -11,8 +11,7 @@
 
     <div id="topContainer">
         <div id="topLeft" class="box">
-            <h2>記録</h2>
-            <p>年齢: 30<br>身長: 157cm<br>start: 48.5kg<br>min: 46.7kg<br>goal: 43kg<br>体脂肪率: 22.5%</p>
+            <p>年齢:    30<br>身長:   157cm<br>start:  48.5kg<br>min:    46.7kg<br>goal:  43kg<br>体脂肪率: 22.5%</p>
         </div>
         <div id="topRight" class="box">
             <h2>Right Container (2/3 Width)</h2>
@@ -44,6 +43,10 @@
                 alert('Incorrect password');
             }
         }
+
+        window.onload = function() {
+            document.getElementById('login').style.display = 'block';
+        };
     </script>
 </body>
 </html>
