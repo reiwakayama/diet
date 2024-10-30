@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left {
+    width: 33%;
+}
+
+.right {
+    width: 65%;
+}
+
+.middle, .bottom {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .top-container {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
+}
