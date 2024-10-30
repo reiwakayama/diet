@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Four Containers Layout</title>
+    <title>Four Boxes Layout</title>
     <link rel="stylesheet" href="diet.css">
 </head>
 <body>
 
-    <div class="container-wrapper">
-        <div class="top-container">
-            <div class="container left">Left Container (1/3 Width)</div>
-            <div class="container right">Right Container (2/3 Width)</div>
+    <div id="topContainer">
+        <div id="topLeft" class="box">
+            <h2>Left Container (1/3 Width)</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
         </div>
-        <div class="container middle">Middle Container (Full Width)</div>
-        <div class="container bottom">Bottom Container (Full Width)</div>
+        <div id="topRight" class="box">
+            <h2>Right Container (2/3 Width)</h2>
+            <p>This is the right container content.</p>
+        </div>
+    </div>
+
+    <div id="middleContainer" class="box">
+        <h2>Middle Container (Full Width)</h2>
+        <p>This section contains important information.</p>
+    </div>
+
+    <div id="bottom" class="box">
+        <h2>Bottom Container (Full Width)</h2>
+        <p>Additional content goes here.</p>
     </div>
 
 </body>
