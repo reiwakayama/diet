@@ -32,14 +32,16 @@
         </div>
     </div>
 
-    <div id="middleContainer">
+<div id="middleContainer">
+    <div class="image-container">
         <img id="image" src="" alt="Image">
         <p id="source"></p>
-        <div>
-            <button onclick="prevImage()">Previous</button>
-            <button onclick="nextImage()">Next</button>
-            <button onclick="randomImage()">Random</button>
-        </div>
+    </div>
+    <div class="button-container">
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="randomImage()">Random</button>
+        <button onclick="nextImage()">Next</button>
+    </div>
 
     <script>
         const images = [
@@ -73,10 +75,9 @@
             displayImage();
         }
 
-        // Initial display
         displayImage();
     </script>
-    </div>
+</div>
 
     <div id="bottom" class="box">
         <h2>My Rule</h2>
