@@ -6,9 +6,9 @@ body {
     font-weight: 500;
     text-decoration: none;
     position: absolute;
-	left: 50%;
-	width: 780px;
-	margin-left: -390px;
+    left: 50%;
+    width: 780px;
+    margin-left: -390px;
 }
 
 a {
@@ -35,44 +35,37 @@ img {
 }
 
 #topContainer {
-	width:780px;
-	position:relative;
-	overflow:hidden;
+    width: 780px;
+    display: flex; 
+    position: relative;
+    overflow: hidden;
 }
 
 #topLeft {
-	width:166px;
-	float:left;
-	position:relative;
-	text-align:left;
-	padding: 17px;
+    width: 166px;
+    padding: 17px;
 }
 
 #topRight {
-	width:535px;
-	padding-top:15px;
-	padding-bottom:15px;
-	padding-left:15px;
-	float:right;
-	position:relative;
-	text-align:left;
-	line-height: 150%;
+    flex: 1; 
+    padding: 15px;
+    line-height: 150%;
 }
 
 #middleContainer {
-	width:780px;
-	margin: 5px  auto;
-	padding: 10px 0;
+    width: 780px;
+    margin: 5px auto;
+    padding: 10px 0;
 }
 
 #bottom {
-	margin-top:5px;
-	padding:25px 15px;
-	width:750px;
+    margin-top: 5px;
+    padding: 25px 15px;
+    width: 750px;
 }
 
 .separator {
-    border: 0; 
+    border: 0;
     border-top: 1px solid #ccc;
-    margin: 5px 0; 
+    margin: 5px 0;
 }
