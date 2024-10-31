@@ -35,7 +35,7 @@
    <div id="middleContainer" class="box">
         <div class="content-wrapper">
             <img id="image"/>
-            <p id="source"></p>
+            <p><a id="source" href="#" target="_blank">Source</a></p>
             <button onclick="prevImage()">Previous</button>
             <button onclick="randomImage()">Random</button>
             <button onclick="nextImage()">Next</button>
@@ -44,10 +44,10 @@
 
     <script>
         const images = [
-            { src: 'image/twice.png', source: 'Source 1' },
-            { src: 'image/yukos.jpg', source: 'Source 2' },
-            { src: 'image/nakamachiaya.jpg', source: 'Source 3' },
-            { src: 'image/wave.png', source: 'Source 4' }
+            { src: 'image/twice.png', source: 'Lemon8', url: 'https://www.lemon8-app.com/discover/twice%20%E5%A3%81%E7%B4%99%20%E3%83%80%E3%82%A4%E3%82%A8%E3%83%83%E3%83%88%E3%83%A2%E3%83%81%E3%83%99?region=jp' },
+            { src: 'image/yukos.jpg', source: '７キロ痩せた１０個の事お話しします....❤︎❤︎', url: 'https://www.youtube.com/watch?v=DkSjamK_3u8' },
+            { src: 'image/nakamachiaya.jpg', source: '中町綾 (@ayanakamachi) ', url: 'https://www.instagram.com/ayanakamachi' },
+            { src: 'image/wave.png', source: '骨格3タイプのダイエットを分かりやすく比較解説！確実に今までのダイエットが変わる', url: 'https://www.youtube.com/watch?v=K6dBk9LVgo0' }
         ];
         
         let currentIndex = 0;
