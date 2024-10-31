@@ -33,7 +33,48 @@
     </div>
 
     <div id="middleContainer" class="box">
-        <h2>画像</h2>
+   <img id="image" src="" alt="Image">
+    <p id="source" style="font-weight: bold;"></p>
+    <div>
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+        <button onclick="randomImage()">Random</button>
+    </div>
+
+    <script>
+        const images = [
+            { src: 'image/twice.png', source: 'Source 1' },
+            { src: 'image/yukos.jpg', source: 'Source 2' },
+            { src: 'image/nakamachiaya.jpg', source: 'Source 3' },
+            { src: 'image/wave.png', source: 'Source 4' }
+        ];
+        
+        let currentIndex = 0;
+
+        function displayImage() {
+            const imgElement = document.getElementById('image');
+            const sourceElement = document.getElementById('source');
+            imgElement.src = images[currentIndex].src;
+            sourceElement.textContent = images[currentIndex].source;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            displayImage();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            displayImage();
+        }
+
+        function randomImage() {
+            currentIndex = Math.floor(Math.random() * images.length);
+            displayImage();
+        }
+
+        displayImage();
+    </script>
     </div>
 
     <div id="bottom" class="box">
