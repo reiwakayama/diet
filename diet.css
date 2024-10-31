@@ -83,3 +83,6 @@ img {
     padding: 0; 
     margin: 0; 
 }
+.no-bullets li {
+    margin: 5px 0;
+}
