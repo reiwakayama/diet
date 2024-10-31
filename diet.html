@@ -33,14 +33,7 @@
     </div>
 
     <div id="middleContainer">
-        <img id="image" src="" alt="Image">
-        <p id="source"></p>
-        <div>
-            <button onclick="prevImage()">Previous</button>
-            <button onclick="nextImage()">Next</button>
-            <button onclick="randomImage()">Random</button>
-        </div>
-
+    <div class="content-wrapper">
     <script>
         const images = [
             { src: 'image/twice.png', source: 'Source 1' },
@@ -73,9 +66,12 @@
             displayImage();
         }
 
-        // Initial display
         displayImage();
     </script>
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+        <button onclick="randomImage()">Random</button>
+    </div>
     </div>
 
     <div id="bottom" class="box">
