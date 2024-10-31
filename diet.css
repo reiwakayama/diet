@@ -78,3 +78,8 @@ img {
     border-top: 1px solid #ccc;
     margin: 5px 0; 
 }
+.no-bullets {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
