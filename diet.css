@@ -2,13 +2,13 @@ body {
     background-color: #d5eaf6;
     text-align: center;
     font-size: 16px;
-    font-family: 'Hachi Maru Ppo', cursive;
+    font-family: 'Hachi Maru Pop', cursive;
     font-weight: 500;
     text-decoration: none;
     position: absolute;
-	left: 50%;
-	width: 780px;
-	margin-left: -390px;
+    left: 50%;
+    width: 780px;
+    margin-left: -390px;
 }
 
 a {
@@ -35,30 +35,30 @@ img {
 }
 
 #topContainer {
-	width:780px;
-	position:relative;
-	overflow:hidden;
+    width: 780px;
+    position: relative;
+    overflow: hidden;
     display: flex;
 }
 
 #topLeft {
-	width:166px;
-	float:left;
-	position:relative;
-	text-align:left;
-	padding: 17px;
-	margin-right: 5px;
+    width: 166px;
+    float: left;
+    position: relative;
+    text-align: left;
+    padding: 17px;
+    margin-right: 5px;
 }
 
 #topRight {
-	width:535px;
-	padding-top:15px;
-	padding-bottom:15px;
-	padding-left:15px;
-	float:right;
-	position:relative;
-	text-align:left;
-	line-height: 150%;
+    width: 535px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    float: right;
+    position: relative;
+    text-align: left;
+    line-height: 150%;
 }
 
 #middleContainer {
@@ -68,7 +68,13 @@ img {
     text-align: center;
 }
 
-img {
+/* New wrapper to contain img and button within middleContainer */
+#middleContainer .content-wrapper {
+    display: inline-block;
+    text-align: center;
+}
+
+#middleContainer img {
     width: 100%; 
     height: 400px; 
     object-fit: contain; 
@@ -76,7 +82,7 @@ img {
     margin-bottom: 10px;
 }
 
-button {
+#middleContainer button {
     margin: 5px;
     padding: 10px 15px;
     font-size: 16px;
@@ -84,21 +90,23 @@ button {
 }
 
 #bottom {
-	margin-top:5px;
-	padding:25px 15px;
-	width:750px;
+    margin-top: 5px;
+    padding: 25px 15px;
+    width: 750px;
 }
 
 .separator {
-    border: 0; 
+    border: 0;
     border-top: 1px solid #ccc;
-    margin: 5px 0; 
+    margin: 5px 0;
 }
+
 .no-bullets {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
+
 .no-bullets li {
     margin: 0px 0;
 }
