@@ -57,6 +57,7 @@
             const sourceElement = document.getElementById('source');
             imgElement.src = images[currentIndex].src;
             sourceElement.textContent = images[currentIndex].source;
+            sourceElement.href = images[currentIndex].url;
         }
 
         function prevImage() {
