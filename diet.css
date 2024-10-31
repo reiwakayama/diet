@@ -68,7 +68,6 @@ img {
     text-align: center;
 }
 
-/* New wrapper to contain img and button within middleContainer */
 #middleContainer .content-wrapper {
     display: inline-block;
     text-align: center;
@@ -76,7 +75,7 @@ img {
 
 #middleContainer img {
     width: 100%; 
-    height: 400px; 
+    height: 300px; 
     object-fit: contain; 
     border: 2px solid #ccc;
     margin-bottom: 10px;
