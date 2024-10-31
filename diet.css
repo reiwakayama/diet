@@ -62,18 +62,20 @@ img {
 }
 
 #middleContainer {
-	width:780px;
-	margin: 5px  auto;
-	padding: 10px 0;
+    width: 780px;
+    margin: 5px auto;
+    padding: 10px 0;
+    text-align: center;
 }
 
 img {
-    width: 100%;
+    width: 100%; 
     height: 400px; 
-    object-fit: cover;
+    object-fit: contain; 
     border: 2px solid #ccc;
     margin-bottom: 10px;
 }
+
 button {
     margin: 5px;
     padding: 10px 15px;
