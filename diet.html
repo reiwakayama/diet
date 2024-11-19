@@ -88,6 +88,63 @@
                 <li>⑤ 白いごはん、揚げ物、ジュース、お菓子は食べない</li>  
                 <li>⑥ 夕食はなるべく早めに食べ終わる（16時とか）</li>  
             </ul>
+        <h2>Countdown</h2>
+        <div class="container">
+            <div class="timer" id="timer1">
+                <h3>結婚</h3>
+                <div class="countdown" id="countdown1"></div>
+            </div>
+            <div class="timer" id="timer2">
+                <h3>グランピング</h3>
+                <div class="countdown" id="countdown2"></div>
+            </div>
+            <div class="timer" id="timer3">
+                <h3>結婚の挨拶</h3>
+                <div class="countdown" id="countdown3"></div>
+            </div>
+            <div class="timer" id="timer4">
+                <h3>BUMPのライブ</h3>
+                <div class="countdown" id="countdown4"></div>
+            </div>
+        </div>
+
+<script>
+    function startCountdown(targetDate, elementId) {
+        const countdownElement = document.getElementById(elementId);
+        
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(interval);
+                countdownElement.textContent = "終了!";
+                return;
+            }
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.textContent = 
+                `${hours < 10 ? "0" : ""}${hours}:` +
+                `${minutes < 10 ? "0" : ""}${minutes}:` +
+                `${seconds < 10 ? "0" : ""}${seconds}`;
+        }, 1000);
+    }
+
+    // Set target dates (in milliseconds)
+    const targetDate1 = new Date('2025-03-09T00:00:00+09:00').getTime(); // Example: December 1, 2024, 12:00 PM JST
+    const targetDate2 = new Date('2024-12-06T13:00:00+09:00').getTime(); // Example: December 15, 2024, 3:30 PM JST
+    const targetDate3 = new Date('2024-12-07T14:00:00+09:00').getTime(); // Example: December 20, 2024, 9:00 AM JST
+    const targetDate4 = new Date('2024-12-08T18:00:00+09:00').getTime(); // Example: December 25, 2024, 6:00 PM JST
+
+    startCountdown(targetDate1, 'countdown1');
+    startCountdown(targetDate2, 'countdown2');
+    startCountdown(targetDate3, 'countdown3');
+    startCountdown(targetDate4, 'countdown4');
+</script>
+        
         <h2>Diet Recipe</h2>
         <p>
             <a href="https://www.youtube.com/watch?v=_bM8TneFoqs&t=290s">2色のつけダレで楽しむぜいたく豚しゃぶ</a><br>
