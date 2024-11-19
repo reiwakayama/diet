@@ -92,28 +92,41 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const startTimeInput = document.getElementById('start-time');
+            const dateInput = document.getElementById('start-date');
+            const timeInput = document.getElementById('start-time');
+            const minutesInput = document.getElementById('start-minutes');
             const calculateButton = document.getElementById('calculate');
             const resultDiv = document.getElementById('result');
             const rememberCheckbox = document.getElementById('remember');
 
             const savedTime = localStorage.getItem('fastStartTime');
             if (savedTime) {
-                startTimeInput.value = savedTime;
+                const [date, time] = savedTime.split(' ');
+                dateInput.value = date;
+                timeInput.value = time.split(':')[0] + ':00';
+                minutesInput.value = time.split(':')[1];
             }
 
             calculateButton.addEventListener('click', () => {
-                const startTime = new Date(startTimeInput.value);
+                const startDate = new Date(dateInput.value + 'T' + timeInput.value + ':' + minutesInput.value);
                 const now = new Date();
-                const elapsed = new Date(now - startTime);
+                const elapsed = now - startDate;
                 
-                const hours = elapsed.getUTCHours();
-                const minutes = elapsed.getUTCMinutes();
+                const hoursElapsed = Math.floor(elapsed / 3600000);
+                const minutesElapsed = Math.floor((elapsed % 3600000) / 60000);
+                
+                if (hoursElapsed < 12 || (hoursElapsed === 12 && minutesElapsed < 0)) {
+                    const remainingMilliseconds = (12 * 3600000) - elapsed;
+                    const remainingHours = Math.floor(remainingMilliseconds / 3600000);
+                    const remainingMinutes = Math.floor((remainingMilliseconds % 3600000) / 60000);
 
-                resultDiv.textContent = `経過時間: ${hours}時間 ${minutes}分`;
+                    resultDiv.textContent = `経過時間: ${hoursElapsed}時間 ${minutesElapsed}分. 残り時間: ${remainingHours}時間 ${remainingMinutes}分でケトーシスに到達します。`;
+                } else {
+                    resultDiv.textContent = `経過時間: ${hoursElapsed}時間 ${minutesElapsed}分. あなたは現在ケトーシスに入っています。`;
+                }
 
                 if (rememberCheckbox.checked) {
-                    localStorage.setItem('fastStartTime', startTimeInput.value);
+                    localStorage.setItem('fastStartTime', dateInput.value + ' ' + timeInput.value + ':' + minutesInput.value);
                 }
             });
         });
