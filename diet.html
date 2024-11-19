@@ -96,7 +96,7 @@
                 グランピング: <span class="countdown" id="countdown2"></span>
             </div>
             <div id="timer3">
-                結婚の挨拶: <span class="countdown" id="countdown3"></span>
+                クリスマス: <span class="countdown" id="countdown3"></span>
             </div>
             <div id="timer4">
                 BUMPのライブ: <span class="countdown" id="countdown4"></span>
@@ -116,21 +116,20 @@
                 return;
             }
 
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             countdownElement.textContent = 
-                `${hours < 10 ? "0" : ""}${hours}:` +
-                `${minutes < 10 ? "0" : ""}${minutes}:` +
-                `${seconds < 10 ? "0" : ""}${seconds}`;
+                `${days}日${hours}時間${minutes}分${seconds}秒`;
         }, 1000);
     }
 
     // Set target dates (in milliseconds)
     const targetDate1 = new Date('2025-03-09T00:00:00+09:00').getTime();
     const targetDate2 = new Date('2024-12-06T13:00:00+09:00').getTime(); 
-    const targetDate3 = new Date('2024-12-07T14:00:00+09:00').getTime(); 
+    const targetDate3 = new Date('2024-12-24T00:00:00+08:00').getTime(); 
     const targetDate4 = new Date('2024-12-08T18:00:00+09:00').getTime();
 
     startCountdown(targetDate1, 'countdown1');
