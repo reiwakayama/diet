@@ -90,6 +90,9 @@
     <br><br>
     <div id="result"></div>
 
+javascript
+
+コピー
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const startTimeInput = document.getElementById('start-time');
@@ -112,26 +115,28 @@
 
             resultDiv.innerHTML = `経過時間: ${totalHours}時間 ${totalMinutes}分<br>`;
 
-            // Check for ketosis (12 hours)
             if (totalHours < 12) {
                 const hoursUntilKetosis = 12 - totalHours;
                 const minutesUntilKetosis = (60 - totalMinutes) % 60;
                 const additionalHours = (totalMinutes === 0) ? hoursUntilKetosis : hoursUntilKetosis - 1;
 
-                resultDiv.innerHTML += `ケトーシスまでの時間: ${additionalHours}時間 ${minutesUntilKetosis}分`;
+                resultDiv.innerHTML += `ケトーシスまであと ${additionalHours}時間 ${minutesUntilKetosis}分`;
             } else {
-                resultDiv.innerHTML += `おめでとうございます！ケトーシス状態です。`;
+                const ketosisDuration = totalHours - 12;
+                const ketosisMinutes = totalMinutes;
+                resultDiv.innerHTML += `ケトーシス状態で ${ketosisDuration}時間 ${ketosisMinutes}分経過`;
             }
 
-            // Check for autophagy (16 hours)
             if (totalHours < 16) {
                 const hoursUntilAutophagy = 16 - totalHours;
                 const minutesUntilAutophagy = (60 - totalMinutes) % 60;
                 const additionalHours = (totalMinutes === 0) ? hoursUntilAutophagy : hoursUntilAutophagy - 1;
 
-                resultDiv.innerHTML += `<br>オートファジーまでの時間: ${additionalHours}時間 ${minutesUntilAutophagy}分`;
+                resultDiv.innerHTML += `<br>オートファジーまであと ${additionalHours}時間 ${minutesUntilAutophagy}分`;
             } else {
-                resultDiv.innerHTML += `<br>おめでとうございます！オートファジー状態です。`;
+                const autophagyDuration = totalHours - 16;
+                const autophagyMinutes = totalMinutes;
+                resultDiv.innerHTML += `<br>オートファジー状態で ${autophagyDuration}時間 ${autophagyMinutes}分経過`;
             }
 
             if (rememberCheckbox.checked) {
