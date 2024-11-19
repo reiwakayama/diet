@@ -80,14 +80,14 @@
     
     <div id="bottom" class="box">
     <h2>Fasting Timer</h2>
-    <label for="start-time">ファスティング開始時間</label>
+    <label for="start-time">ファスティング開始時間:</label>
     <input type="datetime-local" id="start-time">
     <label>
         <input type="checkbox" id="remember"> 保存する
     </label>
-    <br>
+    <br><br>
     <button id="calculate">経過時間を計算する</button>
-
+    <br><br>
     <div id="result"></div>
 
     <script>
@@ -110,7 +110,7 @@
                 const hours = elapsed.getUTCHours();
                 const minutes = elapsed.getUTCMinutes();
 
-                resultDiv.textContent = `Time since you started fasting: ${hours} hours and ${minutes} minutes.`;
+                resultDiv.textContent = `経過時間: ${hours}時間 ${minutes}分`;
 
                 if (rememberCheckbox.checked) {
                     localStorage.setItem('fastStartTime', startTimeInput.value);
